@@ -106,3 +106,76 @@ The institute needs a **Salesforce CRM-based solution** to:
 - GitHub: [RAQUEE07](https://github.com/RAQUEE07)  
 
 ---
+# Campus Event Management App
+
+## Phase 2: Salesforce Setup
+
+In Phase 2, we configured the Campus Event Management App in Salesforce Lightning. The following tasks were completed:
+
+### 1. App Creation
+- **App Name:** Campus Event Management App
+- **Developer Name:** Campus_Event_Management_App
+- **Branding:** Primary color #0070D2
+- Added navigation items for easy access:
+  - Event Details
+  - Participants
+  - Feedback
+  - Sponsors
+  - Calendar
+  - Reports
+  - Dashboards
+
+### 2. Custom Objects & Fields
+**Custom objects created:**
+- **Event Details**
+- **Participants**
+- **Feedback** (optional)
+- **Sponsors** (optional)
+
+**Sample fields for Event Details:**
+- Event Name (Text)
+- Event_Date (Date)
+- Event_Type (Picklist)
+- Location (Text)
+- Number of Participants (Number)
+
+**Sample fields for Participants:**
+- Participant Name (Text)
+- Email (Email)
+- Contact Number (Phone)
+- Event Registered (Lookup to Event Details)
+- Registration Date (Date)
+
+**Feedback object sample fields:**
+- Feedback Name (Text)
+- Event (Lookup)
+- Participant (Lookup)
+- Rating (Number)
+- Comments (Long Text Area)
+
+**Sponsors object sample fields:**
+- Sponsor Name (Text)
+- Contact Person (Text)
+- Email (Email)
+- Phone (Phone)
+- Sponsored Event (Lookup to Event Details)
+
+### 3. Tabs & Navigation
+- Tabs created for all custom objects
+- Tabs added to app navigation for easy access via the App Launcher
+
+### 4. Field-Level Security
+- All fields set to **Visible** for relevant profiles
+- Editable for Admin, Sales, Marketing profiles
+- Lookup relationships verified
+
+### 5. Testing & Verification
+- Sample records created for each object
+- Lookup relationships confirmed
+- Navigation, search, and related lists verified
+- Picklist, date, and number fields tested
+
+### 6. Documentation
+All screenshots and Phase 2 setup documentation are uploaded to the repository in the following folder:
+
+
