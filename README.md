@@ -1,13 +1,24 @@
 Phase 1: https://docs.google.com/document/d/11xv7b0wglcisC8SG9CRtLvgFJnjsmDp7XtXTQwlLS-I/edit?tab=t.0
+
 Phase 2: https://docs.google.com/document/d/1Qen0nPHXFKOGEQZMv68e0Hq2hLArXDHOyeICmb2i3U4/edit?tab=t.0
+
 Phase 3: https://docs.google.com/document/d/1uaxA6Q-4-kA0SHXxKzOZOEfZZ41c-3UyWVYF9LHN7Xw/edit?tab=t.0
+
 Phase 4: https://docs.google.com/document/d/1h-ejkHKer_wZ25SBCGe-jKKq55pHCIhP6bC8soqGAoI/edit?tab=t.0
+
 Phase 5:
+
 Phase 6:
+
 Phase 7:
+
 Phase 8:
+
 Phase 9:
+
 Phase 10:
+
+
 # 🎓 Campus Event Management System  
 
 ---
@@ -187,6 +198,7 @@ In Phase 2, we configured the Campus Event Management App in Salesforce Lightnin
 
 ### 6. Documentation
 All screenshots and Phase 2 setup documentation are uploaded to the repository in the following folder:
+
 
 
 
