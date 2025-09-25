@@ -6,17 +6,17 @@ Phase 3: https://docs.google.com/document/d/1uaxA6Q-4-kA0SHXxKzOZOEfZZ41c-3UyWVY
 
 Phase 4: https://docs.google.com/document/d/1h-ejkHKer_wZ25SBCGe-jKKq55pHCIhP6bC8soqGAoI/edit?tab=t.0
 
-Phase 5:
+Phase 5: https://docs.google.com/document/d/1HjeUgIBCLIahaORE0O4aiDECexOx8Mxbv8eapsLxlkA/edit?tab=t.0
 
-Phase 6:
+Phase 6: https://docs.google.com/document/d/1UiPAjK0tUwS-cIB4Gfx3l20XrkX1U1FFSGr39bGcHGM/edit?tab=t.0
 
-Phase 7:
+Phase 7: https://docs.google.com/document/d/12XXF4tOIBMPjegMqBusGm76Vm6HEgPmVlINs4cL8pB0/edit?tab=t.0
 
-Phase 8:
+Phase 8: https://docs.google.com/document/d/13KQdtD1s1Kg8KD7KnqWPP7n-R7gxU6ma1EH0aG88KGE/edit?tab=t.0
 
-Phase 9:
+Phase 9: https://docs.google.com/document/d/1lJCw3BnwCmHJy0guB_zXkZXxLOb9A9mLgVOHmquGtOQ/edit?tab=t.0
 
-Phase 10:
+Phase 10: https://docs.google.com/document/d/1cezQ1QGt1wsjlgnwCwTISl_J7SR5H2OOkEiw7BxrYxw/edit?tab=t.0
 
 
 # 🎓 Campus Event Management System  
@@ -406,10 +406,101 @@ The institute needs a **Salesforce CRM-based solution** to:
 - **Outcome:** Tracks attendance automatically.  
 
 ---
+## ⚡ Phase 5: Apex Programming (Developer)
+
+### 1. Objective
+- Implement custom business logic using Apex classes, triggers, and batch jobs.
+- Automate workflows that cannot be handled by declarative tools.
+
+### 2. Tasks
+- Created Apex classes for participant reminders and event notifications.
+- Developed triggers to automate data updates (e.g., attendance marking).
+- Implemented batch processing for bulk participant and event records.
+
+### 3. Outcome
+- Reduced manual intervention for repetitive tasks.
+- Ensured timely notifications and updates for participants and organizers.
 
 ---
 
+## ⚡ Phase 6: User Interface Development
+
+### 1. Objective
+- Design user-friendly interfaces for students, organizers, and admins.
+
+### 2. Tasks
+- Created custom Lightning pages for Event Details, Participants, Feedback, and Reports.
+- Configured page layouts, list views, and record types for better usability.
+- Added navigation items and tabs for easy access to key features.
+
+### 3. Outcome
+- Simplified data entry and retrieval.
+- Users can easily navigate the app and manage events efficiently.
 
 ---
 
+## ⚡ Phase 7: Integration & External Access
+
+### 1. Objective
+- Connect Salesforce with external systems and portals to automate data flow.
+
+### 2. Tasks
+- Integrated Salesforce with Google Calendar for event scheduling.
+- Enabled external registration via portals and forms.
+- Configured API access and authentication for secure data exchange.
+
+### 3. Outcome
+- Real-time event updates and registration data from external systems.
+- Reduced manual entry and errors.
+
+---
+
+## ⚡ Phase 8: Data Management & Deployment
+
+### 1. Objective
+- Maintain clean, accurate data and deploy application components to production.
+
+### 2. Tasks
+- Performed bulk updates, imports, and deduplication.
+- Deployed custom objects, fields, workflows, and dashboards using Change Sets and Metadata API.
+- Validated user access, record visibility, and dashboard functionality post-deployment.
+
+### 3. Outcome
+- Ensured production environment is synchronized with development.
+- Maintained data integrity and proper access control.
+
+---
+
+## ⚡ Phase 9: Reporting, Dashboards & Security Review
+
+### 1. Objective
+- Provide analytics, visualize key metrics, and ensure security of sensitive data.
+
+### 2. Tasks
+- Built reports: Event Participation, Jobs with Applications, Feedback Analysis.
+- Created dashboards for organizers and admins with charts and KPI metrics.
+- Reviewed security: OWD, profiles, permission sets, and sharing rules.
+
+### 3. Outcome
+- Users can track event performance, attendance, and feedback.
+- Data is secured and only accessible to authorized roles.
+
+---
+
+## ⚡ Phase 10: Final Presentation & Demo Day
+---
+### 1. Objective
+- Showcase the Campus Event Management System to stakeholders and get feedback.
+
+### 2. Tasks
+- Prepared a live demo with sample data.
+- Presented key features: event management, registration, attendance tracking, feedback, and dashboards.
+- Collected stakeholder feedback for future improvements.
+
+### 3. Outcome
+- Demonstrated working system and achieved project goals.
+- Stakeholders validated app usability and functionality.
+
+
+#### Prepared By - SHAIK RAQUEEBUL ISLAM
 
