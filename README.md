@@ -1,3 +1,24 @@
+Phase 1: https://docs.google.com/document/d/11xv7b0wglcisC8SG9CRtLvgFJnjsmDp7XtXTQwlLS-I/edit?tab=t.0
+
+Phase 2: https://docs.google.com/document/d/1Qen0nPHXFKOGEQZMv68e0Hq2hLArXDHOyeICmb2i3U4/edit?tab=t.0
+
+Phase 3: https://docs.google.com/document/d/1uaxA6Q-4-kA0SHXxKzOZOEfZZ41c-3UyWVYF9LHN7Xw/edit?tab=t.0
+
+Phase 4: https://docs.google.com/document/d/1h-ejkHKer_wZ25SBCGe-jKKq55pHCIhP6bC8soqGAoI/edit?tab=t.0
+
+Phase 5:
+
+Phase 6:
+
+Phase 7:
+
+Phase 8:
+
+Phase 9:
+
+Phase 10:
+
+
 # 🎓 Campus Event Management System  
 
 ---
@@ -9,6 +30,10 @@ Education / Student Communities
 
 ## 📌 Project Type  
 B2C Salesforce CRM Implementation  
+
+---
+
+## Phase 1: Problem Understanding & Industry Analysis
 
 ---
 
@@ -106,13 +131,73 @@ The institute needs a **Salesforce CRM-based solution** to:
 - GitHub: [RAQUEE07](https://github.com/RAQUEE07)  
 
 ---
-# Campus Event Management App
+## ⚙️ Phase 2: Org Setup & Configuration
 
-## Phase 2: Salesforce Setup
+## 1. Salesforce Edition
+- **Edition Used:** Developer Edition  
+- **Purpose:** Free, all-in-one environment for building and testing the Campus Event Management App.
 
-In Phase 2, we configured the Campus Event Management App in Salesforce Lightning. The following tasks were completed:
+---
 
-### 1. App Creation
+## 2. Company Profile Setup
+- **Configured:** Default time zone, default currency  
+- **Use Case:** Ensures consistency across event operations.
+
+---
+
+## 3. Business Hours & Holidays
+- **Status:** Acknowledged as important for scheduling and calculations.  
+- **Note:** Not configured in this project’s scope.
+
+---
+
+## 4. Fiscal Year Settings
+- **Type:** Standard Fiscal Year (January – December).  
+- **Reason:** Simplifies financial alignment for event cycles.
+
+---
+
+## 5. User Setup & Licenses
+- **Created Users:**  
+  - Organizer  
+  - Participant  
+- **Assigned License:** Salesforce (full CRM access).
+
+---
+
+## 6. Profiles
+- **Action:** Cloned **Standard User** → Created custom **Event Organizer** profile.  
+- **Assignment:** Organizer test user.
+
+---
+
+## 7. Roles
+- **Decision:** Role hierarchy **not configured**.  
+- **Reason:** Relied on ownership & profile-based security.
+
+---
+
+## 8. Permission Sets
+- **API Callout Access:** Granted permissions needed for integrations.  
+- **Event Management App Access:** Granted visibility to custom tabs and objects, bypassing profile limitations.
+
+---
+
+## 9. Organization-Wide Defaults (OWD)
+- **Event_Details__c:** Private  
+- **Participant__c:** Private  
+- **Purpose:** Protect sensitive event and participant data.
+
+---
+
+## 10. Deployment Basics
+- **Tool:** Salesforce DX (SFDX).  
+- **Process:** Retrieved and deployed components using **package.xml** manifest.
+
+---
+
+
+### App Creation
 - **App Name:** Campus Event Management App
 - **Developer Name:** Campus_Event_Management_App
 - **Branding:** Primary color #0070D2
@@ -125,7 +210,7 @@ In Phase 2, we configured the Campus Event Management App in Salesforce Lightnin
   - Reports
   - Dashboards
 
-### 2. Custom Objects & Fields
+### Custom Objects & Fields
 **Custom objects created:**
 - **Event Details**
 - **Participants**
@@ -160,23 +245,171 @@ In Phase 2, we configured the Campus Event Management App in Salesforce Lightnin
 - Phone (Phone)
 - Sponsored Event (Lookup to Event Details)
 
-### 3. Tabs & Navigation
-- Tabs created for all custom objects
-- Tabs added to app navigation for easy access via the App Launcher
+## 🗂 Phase 3: Data Modeling & Relationships
 
-### 4. Field-Level Security
-- All fields set to **Visible** for relevant profiles
-- Editable for Admin, Sales, Marketing profiles
-- Lookup relationships verified
+## 1. Dashboard After Login
+- **Action:** Logged into Salesforce Developer Edition.  
+- **Access:** App Launcher, Setup, and other Salesforce tools available.
 
-### 5. Testing & Verification
-- Sample records created for each object
-- Lookup relationships confirmed
-- Navigation, search, and related lists verified
-- Picklist, date, and number fields tested
+---
 
-### 6. Documentation
-All screenshots and Phase 2 setup documentation are uploaded to the repository in the following folder:
+## 2. App Creation
+- **App Name:** *Campus Event Management App*  
+- **Branding:** Primary color `#0070D2`  
+- **Navigation Items Added:** Event Details, Participants, Feedback, Sponsors, Reports, Dashboards.
 
+---
+
+## 3. Standard & Custom Objects
+- **Custom Objects:**  
+  - **Event_Details__c** → Stores event details.  
+  - **Participant__c** → Tracks registered participants.  
+  - **Feedback__c** (optional) → Captures participant feedback.  
+  - **Sponsor__c** (optional) → Stores sponsor details.  
+
+- **Standard Objects:**  
+  - **User** → Used via lookup to assign ownership (e.g., Event Organizer).
+
+---
+
+## 4. Custom Fields
+- **Event_Details__c:** `Event_Date__c (Date)`, `Event_Type__c (Picklist)`.  
+- **Participant__c:** `Participant_Email__c (Email, Unique)`.  
+- **Sponsor__c:** `Sponsor_Name__c (Text)`.  
+- **Feedback__c:** `Feedback_Rating__c (Number, 1–5)`.  
+- **Relationships:**  
+  - `Event__c (Lookup → Event_Details__c)` on `Participant__c`.  
+  - `Participant__c (Lookup → Participant__c)` on `Feedback__c`.
+
+---
+
+## 5. Record Types
+- **Decision:** Not used.  
+- **Reason:** Kept a single streamlined process for all event types.
+
+---
+
+## 6. Page Layouts
+- **Event_Details__c:** Related lists for Participants & Sponsors.  
+- **Participant__c:** Related list for Feedback.  
+- **Sponsor__c:** Lookup to Event_Details__c.  
+- **Feedback__c:** Lookup to Participant__c.
+
+---
+
+## 7. Relationships
+- **Lookup:** Feedback → Participant (feedback can exist independently).  
+- **Master-Detail:** Participant → Event Details (participants must belong to an event).  
+- **Hierarchical:** Not used (only for User object).
+
+---
+
+## 8. Junction Objects
+- **Participant__c:** Acts as a semi-junction object linking `Event_Details__c` & `Feedback__c`.  
+- **Benefit:** Allows multiple participants per event and multiple feedback entries per participant.
+
+---
+
+## 9. Tabs Creation
+- Created tabs for all custom objects to make them accessible in the navigation bar.
+
+---
+
+## 10. Navigation Items
+- Added: Event Details, Participants, Feedback, Sponsors, Reports, Dashboards.
+
+---
+
+## 11. Accessing the App
+- Accessed via App Launcher.  
+- All configured objects and navigation items visible.
+
+---
+
+## 12. Testing Custom Objects
+- **Sample Records Created:**  
+  - Event (e.g., Campus Tech Seminar).  
+  - Participant linked to the Event.  
+  - Feedback linked to Participant & Event.  
+  - Sponsor linked to Event.
+
+---
+
+## 13. Verification of Functionality
+- Tabs open correctly.  
+- Records searchable.  
+- Related lists display linked records.  
+- Picklists, text, date, and number fields validated.
+
+---
+
+## ⚡ Phase 4: Automation & Approvals
+
+## 1. Workflow Rules
+- **Object:** Participant__c  
+- **Rule:** Triggered when a new Participant record is created.  
+- **Action:** Sends email alert to organizer confirming participant registration.  
+- **Outcome:** Automates notifications without manual intervention.  
+
+---
+
+## 2. Email Alerts
+- **Alert Name:** Participant_Approval_Reminder  
+- **Object:** Participant__c  
+- **Template Used:** Standard *Appointment Confirmation* template (customized for events).  
+- **Recipients:** Organizer, Integration User, and specific test users.  
+- **From Address:** Current User’s email address.  
+
+---
+
+## 3. Field Updates
+- **Field Update Name:** Set_Status_Approved  
+- **Object:** Participant__c  
+- **Field:** Status__c  
+- **Update Value:** `Approved`  
+- **Re-evaluation:** Workflow rules rechecked after field update.  
+- **Purpose:** Automates participant approval process.  
+
+---
+
+## 4. Tasks
+- **Task Name:** Participant Approval Task  
+- **Assigned To:** Event Organizer (user).  
+- **Priority:** Normal  
+- **Status:** Not Started  
+- **Due Date:** Configurable with offset (e.g., +2 days).  
+- **Description:** “Review participant registration and confirm approval.”  
+
+---
+
+## 5. Approval Process
+- **Object:** Participant__c  
+- **Entry Criteria:** Status = `Pending`  
+- **Steps:**  
+  1. **Initial Submission:** Participant record submitted for approval.  
+  2. **Step 1 Approver:** Automatically assigned to Organizer (or queue).  
+  3. **Step 2 (Optional):** Additional approver assigned manually if required.  
+- **Final Actions:**  
+  - Approve → Status__c updated to `Approved`.  
+  - Reject → Status__c updated to `Rejected`.  
+  - Email Alerts triggered accordingly.  
+
+---
+
+## 6. Flow Builder Automation
+- **Flow Name:** Event Attendance Flow  
+- **Action:** Create record in `Event_Attendance__c` when Participant is approved.  
+- **Logic:**  
+  - Input: Participant record variable.  
+  - Condition: Status__c = `Approved`.  
+  - Action: Create related `Event_Attendance__c` record with Event ID and Participant ID.  
+- **Outcome:** Tracks attendance automatically.  
+
+---
+
+---
+
+
+---
 
 
