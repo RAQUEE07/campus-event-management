@@ -18,6 +18,8 @@ Phase 9: https://docs.google.com/document/d/1lJCw3BnwCmHJy0guB_zXkZXxLOb9A9mLgVO
 
 Phase 10: https://docs.google.com/document/d/1cezQ1QGt1wsjlgnwCwTISl_J7SR5H2OOkEiw7BxrYxw/edit?tab=t.0
 
+DEMO_VIDEO: https://drive.google.com/file/d/1Q3iZuAhrbScS5m-ubTIAdHJ5hX7H3fIH/view?usp=sharing
+
 
 # 🎓 Campus Event Management System  
 
@@ -503,4 +505,5 @@ The institute needs a **Salesforce CRM-based solution** to:
 
 
 #### Prepared By - SHAIK RAQUEEBUL ISLAM
+
 
